@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="520" viewBox="0 0 380 520">
+  <rect width="380" height="520" fill="#e8e8e8"/>
+  <circle cx="190" cy="190" r="90" fill="#cccccc"/>
+  <ellipse cx="190" cy="420" rx="130" ry="100" fill="#cccccc"/>
+  <text x="190" y="490" font-family="Georgia, serif" font-size="13" fill="#999" text-anchor="middle" font-style="italic">Dr. Batsaikhan Ookhnoi</text>
+</svg>

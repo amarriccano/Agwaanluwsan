@@ -1,0 +1,47 @@
+<template>
+  <nav class="navbar">
+    <NuxtLink to="/" class="brand">Batsaikhan Ookhnoi</NuxtLink>
+
+    <div class="nav-container">
+      <div class="nav-links">
+        <NuxtLink to="/about">About</NuxtLink>
+        <NuxtLink to="/books">Books</NuxtLink>
+        <NuxtLink to="/interviews">Interviews</NuxtLink>
+        <NuxtLink to="/talks">Talks</NuxtLink>
+        <NuxtLink to="/articles">Articles</NuxtLink>
+        <NuxtLink to="/media">Media</NuxtLink>
+        <NuxtLink to="/contact">Contact</NuxtLink>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <NuxtLink to="/search" class="search-container" style="text-decoration: none;">
+          <span style="font-size: 14px; margin-right: 5px; color: #777;">🔍</span>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search archive..."
+            @click.prevent="goToSearch"
+            @focus="goToSearch"
+            readonly
+          />
+        </NuxtLink>
+
+        <NuxtLink to="/books/cart" class="cart-icon">
+          <span>🛒</span>
+          <span v-if="totalItems > 0" class="cart-badge">{{ totalItems }}</span>
+          <span v-if="totalItems === 0">Cart</span>
+          <span v-else>{{ totalItems }} item{{ totalItems !== 1 ? 's' : '' }}</span>
+        </NuxtLink>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<script setup lang="ts">
+const router = useRouter()
+const { totalItems } = useCart()
+
+function goToSearch() {
+  router.push('/search')
+}
+</script>

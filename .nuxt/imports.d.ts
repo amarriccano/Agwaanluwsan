@@ -33,4 +33,3 @@ export { defineLazyHydrationComponent } from '#app/composables/lazy-hydration';
 export { useAdminAuth } from '../composables/useAdminAuth';
 export { useApi } from '../composables/useApi';
 export { useCart, CartItem } from '../composables/useCart';
-export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';

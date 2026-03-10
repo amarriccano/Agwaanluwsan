@@ -1,16 +1,16 @@
 <template>
   <nav class="navbar">
-    <NuxtLink to="/" class="brand">Batsaikhan Ookhnoi</NuxtLink>
+    <NuxtLink to="/" class="brand">О.Батсайхан</NuxtLink>
 
     <div class="nav-container">
       <div class="nav-links">
-        <NuxtLink to="/about">About</NuxtLink>
-        <NuxtLink to="/books">Books</NuxtLink>
-        <NuxtLink to="/interviews">Interviews</NuxtLink>
-        <NuxtLink to="/talks">Talks</NuxtLink>
-        <NuxtLink to="/articles">Articles</NuxtLink>
+        <NuxtLink to="/about">Намтар</NuxtLink>
+        <NuxtLink to="/books">Ном</NuxtLink>
+        <NuxtLink to="/interviews">Ярилцлага</NuxtLink>
+        <NuxtLink to="/talks">Яриа</NuxtLink>
+        <NuxtLink to="/articles">Нийтлэл</NuxtLink>
         <NuxtLink to="/media">Media</NuxtLink>
-        <NuxtLink to="/contact">Contact</NuxtLink>
+        <NuxtLink to="/contact">Холбогдох</NuxtLink>
       </div>
 
       <div style="display: flex; align-items: center; gap: 1rem;">
@@ -19,7 +19,7 @@
           <input
             type="text"
             class="search-input"
-            placeholder="Search archive..."
+            placeholder="Хайлт..."
             @click.prevent="goToSearch"
             @focus="goToSearch"
             readonly
@@ -29,8 +29,7 @@
         <NuxtLink to="/books/cart" class="cart-icon">
           <span>🛒</span>
           <span v-if="totalItems > 0" class="cart-badge">{{ totalItems }}</span>
-          <span v-if="totalItems === 0">Cart</span>
-          <span v-else>{{ totalItems }} item{{ totalItems !== 1 ? 's' : '' }}</span>
+          <span v-if="totalItems === 0">Сагс</span>
         </NuxtLink>
       </div>
     </div>

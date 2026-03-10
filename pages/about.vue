@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page-header">
-      <h1>About</h1>
+      <h1>Намтар</h1>
       <p>Biography, credentials and academic appointments.</p>
     </div>
 

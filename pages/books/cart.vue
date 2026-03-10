@@ -1,8 +1,7 @@
 <template>
   <div>
     <div class="page-header">
-      <h1>Your Cart</h1>
-      <p>Review your order, then fill in your details to request delivery.</p>
+      <h1>Таны Сагс</h1>
     </div>
 
     <!-- RECEIPT VIEW -->
@@ -46,15 +45,15 @@
     <!-- CART + FORM VIEW -->
     <div v-else class="cart-page">
       <div v-if="cartItems.length === 0" class="empty-cart">
-        <p>Your cart is empty.</p>
-        <NuxtLink to="/books" class="btn">Browse Books</NuxtLink>
+        <p>Таны сагс хоосон байна.</p>
+        <NuxtLink to="/books" class="btn">Ном үзэх</NuxtLink>
       </div>
 
       <template v-else>
         <table class="cart-table">
           <thead>
             <tr>
-              <th>Book</th><th>Price</th><th>Quantity</th><th>Subtotal</th><th></th>
+              <th>Book</th><th>Price⠀⠀⠀</th><th>Quantity</th><th>Subtotal</th><th></th>
             </tr>
           </thead>
           <tbody>
@@ -80,33 +79,33 @@
         </table>
 
         <div class="cart-summary">
-          <p class="cart-total">Total: <strong>{{ formatPrice(totalPrice) }}</strong></p>
-          <p style="font-size:0.82rem;color:var(--text-light);margin-top:0.5rem;">Payment collected upon delivery.</p>
+          <p class="cart-total">Нийт: <strong>{{ formatPrice(totalPrice) }}</strong></p>
+          <!-- <p style="font-size:0.82rem;color:var(--text-light);margin-top:0.5rem;">Payment collected upon delivery.</p> -->
         </div>
 
         <div class="order-form">
-          <h2>Delivery Information</h2>
-          <p class="form-subtitle">Fill in your details. Rennab will contact you to confirm delivery.</p>
+          <h2>Хүргэлтийн Мэдээлэл</h2>
+          <p class="form-subtitle"></p>
 
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label">Full Name *</label>
+              <label class="form-label">Нэр *</label>
               <input v-model="form.name" type="text" class="form-input" placeholder="Your full name" />
             </div>
             <div class="form-group">
-              <label class="form-label">Phone Number *</label>
+              <label class="form-label">Утасны Дугаар *</label>
               <input v-model="form.phone" type="tel" class="form-input" placeholder="+976 xxxxxxxx" />
             </div>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Delivery Address *</label>
+            <label class="form-label">Хүргэлтийн Хаяг *</label>
             <textarea v-model="form.address" class="form-textarea"
               placeholder="Full address including district, khoroo, apartment number, Ulaanbaatar" />
           </div>
 
           <div class="form-group">
-            <label class="form-label">Additional Notes (optional)</label>
+            <label class="form-label">Нэмэлт Мэдээлэл (заавал биш)</label>
             <input v-model="form.notes" type="text" class="form-input"
               placeholder="Best time to call, preferred delivery day…" />
           </div>
@@ -115,9 +114,9 @@
 
           <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-top:1.5rem;">
             <button class="btn" :disabled="submitting" @click="placeOrder">
-              {{ submitting ? 'Placing order…' : 'Place Order' }}
+              {{ submitting ? 'Захиалга бэлдэж байна…' : 'Захиалах' }}
             </button>
-            <NuxtLink to="/books" class="btn-outline">Continue Shopping</NuxtLink>
+            <NuxtLink to="/books" class="btn-outline">Цуцлах</NuxtLink>
           </div>
         </div>
       </template>
